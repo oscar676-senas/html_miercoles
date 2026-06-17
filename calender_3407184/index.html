@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- container del menu -->
+    <div class="main-header">
+        <!--  menu  -->
+        <div class="main-header__container">
+            <!-- logo del menu -->
+            <div class="main-header__logo">
+                Calendario de Eventos
+            </div>
+
+            <!-- toggle menu: boton de hamburguesa -->
+            <button class="main-header__toggle" id="menu-toggle" >
+                <div class="main-header__bar"></div>
+                <div class="main-header__bar"></div>
+                <div class="main-header__bar"></div>
+            </button>
+            
+            <!-- navegacion: buscar , ayuda , configuracion -->
+            <div class="main-nav"  id="main-nav">
+                <ul class="main-nav__list">
+                    <li class="main-nav__item">
+                        <a class="main-nav__link" href="">
+                            Buscar
+                        </a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link" href="">
+                            Ayuda
+                        </a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link" href="">
+                            Configuracion
+                        </a>
+                    </li>
+                </ul>
+            </div> 
+        </div>
+
+    </div>
+
+
+    <!--  container del calendar  -->
+    <div class="container">
+
+        <!-- Aqui va a ir el nombre del mes -->
+        <div class="month" > June </div>
+
+        <!-- Aqui van los dias de la semana -->
+        <!-- este es un grid container-->
+        <div class="days" >
+            <div class="days__item">Mon</div>
+            <div class="days__item">Tue</div>
+            <div class="days__item">Wed</div>
+            <div class="days__item">Thu</div>
+            <div class="days__item">Fri</div>
+            <div class="days__item">Sat</div>
+            <div class="days__item">Sun</div>
+        </div>
+
+        <!-- Aqui van los dias del mes -->
+        <div class="schedule">
+            <div class="schedule__day">1</div>
+            <div class="schedule__day">2</div>
+            <div class="schedule__day">3</div>
+            <div class="schedule__day">4</div>
+            <div class="schedule__day">5</div>
+            <div class="schedule__day">6</div>
+            <div class="schedule__day">7</div>
+            <div class="schedule__day">8</div>
+            <div class="schedule__day">9</div>
+            <div class="schedule__day">10</div>
+            <div class="schedule__day">11</div>
+            <div class="schedule__day">12</div>
+            <div class="schedule__day">13</div>
+            <div class="schedule__day">14</div>
+            <div class="schedule__day">15</div>
+            <div class="schedule__day">16</div>
+            <div class="schedule__day">17</div>
+            <div class="schedule__day">18</div>
+            <div class="schedule__day">19</div>
+            <div class="schedule__day">20</div>
+            <div class="schedule__day">21</div>
+            <div class="schedule__day">22</div>
+            <div class="schedule__day">23</div>
+            <div class="schedule__day">24</div>
+            <div class="schedule__day">25</div>
+            <div class="schedule__day">26</div>
+            <div class="schedule__day">27</div>
+            <div class="schedule__day">28</div>
+            <div class="schedule__day">29</div>
+            <div class="schedule__day">30</div>
+        </div>
+    </div>
+
+    <!--función de JS para el click-->
+    <script>
+        //DOM: Document Object Model
+        const menuToggle = document.getElementById("menu-toggle");
+        console.log(menuToggle)
+        const mainNav = document.getElementById("main-nav");
+        console.log(mainNav)
+
+        //evento click del menutoggle:
+        menuToggle.addEventListener('click' ,function(){
+            //cambiar la clase que controla la altura del menu
+            mainNav.classList.toggle('main-nav__open')
+        });
+    </script>
+</body>
+</html>
+
+/*actividad: en el calendario agregar minimo 10 eventos con cards, lo cual debe contener el nombre del evento, la descripcion, hora del evento y un pequeño icono*/
+/*todo debe de quedar consistenete, o sea se debe adaptar a distintos tamaños de dispositivos sin desbordarse*/ 
